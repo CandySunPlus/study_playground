@@ -2,6 +2,7 @@
 
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
+const webpack = require('webpack');
 
 
 module.exports = {
@@ -9,6 +10,13 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
+  plugins: [
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        }
+      })
+  ],
   module: {
     loaders: [{
       test: /\.js$/,

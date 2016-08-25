@@ -1,3 +1,16 @@
+html,
+body,
+.container {
+    margin: 0;
+    height: 100%;
+}
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
 .layout,
 .side-menu,
 .header
@@ -6,7 +19,7 @@
   &:after {
     content: '.'attr(class);
     font-size: 12px;
-    font-family: 'Source Han Sans HW SC';
+    font-family: 'Source Han Sans HW SC', monospace;
     color: red;
     position: absolute;
     right: 5px;
@@ -15,8 +28,8 @@
 }
 
 .layout {
-  width: 375px;
-  height: 667px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, .05);
   overflow: hidden;
   &:before {
@@ -61,7 +74,7 @@
       opacity: 1;
       pointer-events: auto;
     }
-    .side-menu {
+    .side-menu {  
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       transform: none;
       &.menu-animatable {
